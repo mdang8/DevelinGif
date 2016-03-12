@@ -21,7 +21,6 @@ class AnotherOne:
     def __init__(self):
         self.r = praw.Reddit(user_agent='Another One by /u/ObligatoryDevelinGif')
         self.user = self.r.get_redditor(''.join(chr(x) for x in [100, 101, 118, 101, 110, 115, 116, 111, 110, 111, 119]))
-        self.subreddit = subreddit
 
     def initialize(self):
         r.login('ObligatoryDevelinGif', 'allielynn')  # sup Nate
