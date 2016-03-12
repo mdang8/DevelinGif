@@ -25,14 +25,14 @@ class AnotherOne:
     def initialize(self):
         r.login('ObligatoryDevelinGif', 'allielynn')  # sup Nate
         gen_comments = self.user.get_comments(limit=10)  # 10 most recent comments
-        gen_submissions = self.user.get_submissions(limit=5)  # 5 most recent submissions
+        # gen_submissions = self.user.get_submissions(limit=5)  # 5 most recent submissions
         for comment in gen_comments:  # iterates through each of the 10 comments
             comment.refresh()  # idk why you have to do this, but whatevs
             if 'http://i.imgur.com/9E84BUk.png' not in comment.replies:  # link has not already been commented
                 comment.add_comment('http://i.imgur.com/9E84BUk.png')  # so let's reply with it! Yeah another one!
-        for submission in gen_submissions:  # iterates through each of the 5 submissions
-            if 'http://i.imgur.com/9E84BUk.png' not in praw.helpers.flatten_tree(submission.comments):
-                submission.add_comment('http://i.imgur.com/9E84BUk.png')
+        # for submission in gen_submissions:  # iterates through each of the 5 submissions
+        #     if 'http://i.imgur.com/9E84BUk.png' not in praw.helpers.flatten_tree(submission.comments):
+        #         submission.add_comment('http://i.imgur.com/9E84BUk.png')
                 
 if __name__ == '__main__':
     khaled = AnotherOne()
